@@ -73,10 +73,6 @@ class TwComment(CrawlSpider):
         #urls = ['https://twitter.com/rihanna','https://twitter.com/justdemi']
         #urls = ['https://twitter.com/rustyrockets','https://twitter.com/MileyCyrus']
         
-    
-        #名人twitter， 爬过
-        #urls = ['https://twitter.com/BarackObama', 'https://twitter.com/BillClinton','https://twitter.com/HillaryClinton','https://twitter.com/FLOTUS','https://twitter.com/mike_pence','https://twitter.com/KellyannePolls','https://twitter.com/MichelleObama','https://twitter.com/Pontifex','https://twitter.com/Queen_Europe','https://twitter.com/BillGates','https://twitter.com/David_Cameron','https://twitter.com/JeffBezos','https://twitter.com/narendramodi','https://twitter.com/Cristiano','https://twitter.com/KingJames','https://twitter.com/rogerfederer','https://twitter.com/neymarjr','https://twitter.com/RafaelNadal','https://twitter.com/StephenCurry30','https://twitter.com/DjokerNole','https://twitter.com/RondaRousey','https://twitter.com/serenawilliams','https://twitter.com/MariaSharapova','https://twitter.com/TheNotoriousMMA','https://twitter.com/kobebryant','https://twitter.com/KDTrey5','https://twitter.com/FloydMayweather','https://twitter.com/GalGadot','https://twitter.com/EmmaWatson','https://twitter.com/lizasoberano','https://twitter.com/NargisFakhri','https://twitter.com/russellcrowe','https://twitter.com/McConaughey','https://twitter.com/LeoDiCaprio','https://twitter.com/realdepp','https://twitter.com/RobertDowneyJr','https://twitter.com/TomCruise','https://twitter.com/justinbieber','https://twitter.com/khloekardashian','https://twitter.com/kourtneykardash','https://twitter.com/KendallJenner','https://twitter.com/nytimes','https://twitter.com/cnnbrk','https://twitter.com/BBCBreaking','https://twitter.com/Google','https://twitter.com/FoxNews','https://twitter.com/WhiteHouse','https://twitter.com/ABC','https://twitter.com/ImRaina','https://twitter.com/BreakingNews','https://twitter.com/gmail','https://twitter.com/Aly_Raisman','https://twitter.com/JohnWall','https://twitter.com/JHarden13','https://twitter.com/espn','https://twitter.com/CNN','https://twitter.com/NBA','https://twitter.com/GameOfThrones','https://twitter.com/SamuelLJackson','https://twitter.com/AntDavis23','https://twitter.com/jtimberlake','https://twitter.com/tomhanks','https://twitter.com/mark_wahlberg','https://twitter.com/danielwuyanzu','https://twitter.com/TheLewisTan','https://twitter.com/adamcarolla','https://twitter.com/KyrieIrving','https://twitter.com/NiallOfficial','https://twitter.com/chelseahandler','https://twitter.com/twhiddleston','https://twitter.com/taylorswift13','https://twitter.com/chrishemsworth','https://twitter.com/MarvelStudios','https://twitter.com/Schwarzenegger','https://twitter.com/JimCameron','https://twitter.com/TheRock','https://twitter.com/OfficialKat', 'https://twitter.com/SophieT','https://twitter.com/Maisie_Williams','https://twitter.com/susmitchakrabo1','https://twitter.com/ladygaga','https://twitter.com/katyperry','https://twitter.com/KimKardashian','https://twitter.com/aplusk','https://twitter.com/rihanna','https://twitter.com/justdemi','https://twitter.com/rustyrockets','https://twitter.com/MileyCyrus']
-        
         for url in urls:
             yield http.Request(url, callback=self.parse_page)
     
@@ -95,7 +91,6 @@ class TwComment(CrawlSpider):
 
     def parse_tweet_item(self, items):
         for item in items:
-            #try:
                 comment = Comment()
 
                 comment['content'] = item.xpath('ancestor::p/text()').extract()[0]
@@ -106,8 +101,6 @@ class TwComment(CrawlSpider):
                     # If there is not text, we ignore the comment
                     continue
                 yield comment
-                #except:
-#logger.error("Error comment:\n%s" % item.xpath('.').extract()[0])
 
 
 

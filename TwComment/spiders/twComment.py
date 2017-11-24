@@ -14,9 +14,6 @@ class TwComment(CrawlSpider):
     #the name of the spider
 
     def start_requests(self):
-        #实时新闻
-        #urls = ['https://twitter.com', 'https://twitter.com/i/streams/category/686639666771046402', 'https://twitter.com/i/streams/category/686639666779394057', 'https://twitter.com/i/streams/category/686639666779426835', 'https://twitter.com/i/streams/category/686639666779394055', 'https://twitter.com/i/streams/category/686639666779426842', 'https://twitter.com/i/streams/category/686639666779426845', 'https://twitter.com/i/streams/category/686639666779394072', 'https://twitter.com/i/streams/category/690675490684678145', 'https://twitter.com/i/streams/category/692079932940259328', 'https://twitter.com/i/streams/category/788602775839965184', 'https://twitter.com/i/streams/category/841388582518562816', 'https://twitter.com/i/streams/category/841390443338309632']
-        
         #13个实时
         #urls = ['https://twitter.com', 'https://twitter.com/i/streams/category/686639666771046402',]
         #urls = ['https://twitter.com/i/streams/category/686639666779394057', 'https://twitter.com/i/streams/category/686639666779426835',]
@@ -27,7 +24,7 @@ class TwComment(CrawlSpider):
         #urls = ['https://twitter.com/i/streams/category/841390443338309632']
         
 
-#88 个名人
+        #88 个名人
         #urls = ['https://twitter.com/BarackObama', 'https://twitter.com/BillClinton']
         #urls = ['https://twitter.com/HillaryClinton','https://twitter.com/FLOTUS']
         #urls = ['https://twitter.com/mike_pence','https://twitter.com/KellyannePolls']

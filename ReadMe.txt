@@ -1,6 +1,21 @@
-爬虫程序在TwComment -> spiders -> twComment.py
+ScrapyCrawl program
+crawl comments with emoji only from twitter pages
 
-在twComment.py里有start_requests函数里的urls是起始网址
+File Explanation: 
+twComment.py (/TwComment/spiders/twComment.py) is the crawl file
+	TwComment is the name of this spider
+	urls are the starting website
+	output: results.json 
+		format: 
+			content: comment
+			image: emoji image
+			title: emoji title
 
-最后生成的文件是json格式的，存在TwComment文件下，名称是results.json
+select_data.py uses for select data and remove duplicate item(same content and same emoji)
+	input: results.json
+	output: newUniData.json
+
+Run: 
+Open one of url block or type a new url
+Under file directory, run "scrapy crawl TwComment"
 

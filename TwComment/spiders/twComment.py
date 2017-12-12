@@ -44,7 +44,7 @@ class TwComment(CrawlSpider):
         #urls = ['https://twitter.com/McConaughey','https://twitter.com/LeoDiCaprio']
         #urls = ['https://twitter.com/realdepp','https://twitter.com/RobertDowneyJr']
         #urls = ['https://twitter.com/TomCruise','https://twitter.com/justinbieber']
-        urls = ['https://twitter.com/khloekardashian','https://twitter.com/kourtneykardash']
+        #urls = ['https://twitter.com/khloekardashian','https://twitter.com/kourtneykardash']
         #urls = ['https://twitter.com/KendallJenner','https://twitter.com/nytimes']
         #urls = ['https://twitter.com/cnnbrk','https://twitter.com/BBCBreaking']
         #urls = ['https://twitter.com/Google','https://twitter.com/FoxNews']

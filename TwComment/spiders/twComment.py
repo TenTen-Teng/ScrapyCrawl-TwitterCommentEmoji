@@ -31,7 +31,7 @@ class TwComment(CrawlSpider):
         #urls = ['https://twitter.com/MichelleObama','https://twitter.com/Pontifex']
         #urls = ['https://twitter.com/Queen_Europe','https://twitter.com/BillGates']
         #urls = ['https://twitter.com/David_Cameron','https://twitter.com/JeffBezos']
-        urls = ['https://twitter.com/narendramodi','https://twitter.com/Cristiano']
+        #urls = ['https://twitter.com/narendramodi','https://twitter.com/Cristiano']
         #urls = ['https://twitter.com/KingJames','https://twitter.com/rogerfederer']
         #urls = ['https://twitter.com/neymarjr','https://twitter.com/RafaelNadal']
         #urls = ['https://twitter.com/StephenCurry30','https://twitter.com/DjokerNole']
@@ -44,7 +44,7 @@ class TwComment(CrawlSpider):
         #urls = ['https://twitter.com/McConaughey','https://twitter.com/LeoDiCaprio']
         #urls = ['https://twitter.com/realdepp','https://twitter.com/RobertDowneyJr']
         #urls = ['https://twitter.com/TomCruise','https://twitter.com/justinbieber']
-        #urls = ['https://twitter.com/khloekardashian','https://twitter.com/kourtneykardash']
+        urls = ['https://twitter.com/khloekardashian','https://twitter.com/kourtneykardash']
         #urls = ['https://twitter.com/KendallJenner','https://twitter.com/nytimes']
         #urls = ['https://twitter.com/cnnbrk','https://twitter.com/BBCBreaking']
         #urls = ['https://twitter.com/Google','https://twitter.com/FoxNews']
@@ -78,8 +78,7 @@ class TwComment(CrawlSpider):
         items = response.xpath('//div[@class="js-tweet-text-container"]/p[@lang=\"en\"]/img[@class=\'Emoji Emoji--forText\']')
         for item in self.parse_tweet_item(items):
             yield item
-        
-        #next_page_id = response.xpath('//div[@data-permalink-path]').xpath('attribute::data-permalink-path').extract()
+
         next_page_id = response.xpath('//div[@class="js-tweet-text-container"]/p[@lang=\"en\"]/a[@class=\"twitter-atreply pretty-link js-nav\"]').xpath('attribute::href').extract()
         
         for item in next_page_id:
